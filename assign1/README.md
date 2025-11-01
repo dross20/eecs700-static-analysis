@@ -89,8 +89,8 @@ where `body'` replaces `return e` with `ret := e`.
 
 **Handling Old Variables:** When verifying the function body, the prover must capture the **initial value** of every variable $v$ referenced as $\text{old}(v)$ in the $\text{ensures}_f$ clause.
 
-* For each $\text{old}(v)$ in $\text{ensures}_f$, introduce a fresh variable $v_{\text{old}}$ (e.g., $x_{\text{old}}$) into the pre-state.
-* The $\text{requires}_f$ formula must be augmented with the assumption $v_{\text{old}} = v$ for all such variables.
+* For each $\text{old}(v)$ in $$\\text{ensures}\_f$$, introduce a fresh variable $v_{\text{old}}$ (e.g., $x_{\text{old}}$) into the pre-state.
+* The $\text{requires}\_f$ formula must be augmented with the assumption $v_{\text{old}} = v$ for all such variables.
 
 **Call Rule.** At a call site $x = f(e_1, e_2)$ with `modifies` list $M$:
 
